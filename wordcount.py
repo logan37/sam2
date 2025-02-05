@@ -3,12 +3,6 @@ import os
 import logging
 from pyspark import SparkContext
 
-# Set JAVA_HOME environment variable
-# os.environ['JAVA_HOME'] = r'C:\Program Files\Java\jdk1.8.0_441'
-
-# Set HADOOP_HOME environment variable
-# os.environ['HADOOP_HOME'] = r'D:\Workspace\Repos\winutils\hadoop-3.3.5'
-
 # Configure logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
