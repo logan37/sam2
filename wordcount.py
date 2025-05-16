@@ -7,10 +7,12 @@ from pyspark import SparkContext
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
+input_file = r"D:\Workspace\Data\hadoop\sample.txt"
+output_dir = r"D:\Workspace\Data\Sink"
+
+
 # Initialize a SparkContext
 sc = SparkContext("local", "WordCount")
-
-output_dir = r"D:\Workspace\Data\sam2\README_count"
 
 try:
     # Remove the output directory if it exists
@@ -19,7 +21,7 @@ try:
         logger.info(f"Removed existing output directory: {output_dir}")
 
     # Read the input text file into an RDD
-    text_file = sc.textFile(r"D:\Workspace\sam2\README.md")
+    text_file = sc.textFile(input_file)
     logger.info("Read input text file into RDD")
 
     # Perform the word count
